@@ -1,0 +1,229 @@
+    LoadVar("Cakes", SavedGame);
+    LoadVar("ClickerCPS", SavedGame);
+    LoadVar("OvenCPS", SavedGame);
+    LoadVar("BankCPS", SavedGame);
+    LoadVar("CakeStoreCPS", SavedGame);
+    LoadVar("FactoryCPS", SavedGame);
+    LoadVar("FarmCPS", SavedGame);
+    LoadVar("ConsoleCPS", SavedGame);
+    LoadVar("WebsiteCPS", SavedGame);
+    LoadVar("AdCPS", SavedGame);
+    LoadVar("AppCPS", SavedGame);
+    LoadVar("CakegameCPS", SavedGame);
+    LoadVar("HackerCPS", SavedGame);
+    LoadVar("Clickers", SavedGame);
+    LoadVar("Ovens", SavedGame);
+    LoadVar("Banks", SavedGame);
+    LoadVar("CakeStores", SavedGame);
+    LoadVar("Factorys", SavedGame);
+    LoadVar("Farms", SavedGame);
+    LoadVar("Consoles", SavedGame);
+    LoadVar("Websites", SavedGame);
+    LoadVar("Ads", SavedGame);
+    LoadVar("Apps", SavedGame);
+    LoadVar("Cakegames", SavedGame);
+    LoadVar("Hackers", SavedGame);
+    LoadVar("ClickerCost", SavedGame);
+    LoadVar("OvenCost", SavedGame);
+    LoadVar("BankCost", SavedGame);
+    LoadVar("CakeStoreCost", SavedGame);
+    LoadVar("FactoryCost", SavedGame);
+    LoadVar("FarmCost", SavedGame);
+    LoadVar("ConsoleCost", SavedGame);
+    LoadVar("WebsiteCost", SavedGame);
+    LoadVar("AdCost", SavedGame);
+    LoadVar("AppCost", SavedGame);
+    LoadVar("CakegameCost", SavedGame);
+    LoadVar("HackerCost", SavedGame);
+
+
+
+var GameSave = {
+Cakes: Cakes,
+ClickerCPS: ClickerCPS,
+OvenCPS: OvenCPS,
+BankCPS: BankCPS,
+CookieStoreCPS: CakeStoreCPS,
+FactoryCPS: FactoryCPS,
+FarmCPS: FarmCPS,
+ConsoleCPS: ConsoleCPS,
+WebsiteCPS: WebsiteCPS,
+AdCPS: AdCPS,
+AppCPS: AppCPS,
+CakegameCPS: CakegameCPS,
+HackerCPS: HackerCPS,
+Clickers: Clickers,
+Ovens: Ovens,
+Banks: Banks,
+CakeStores: CakeStores,
+Factorys: Factorys,
+Farms: Farms,
+Consoles: Consoles,
+Websites: Websites,
+Ads: Ads,
+Apps: AppCPS,
+Cakegames: Cakegames,
+Hackers: Hackers,
+ClickerCost: ClickerCost,
+OvenCost: OvenCost,
+BankCost: BankCost,
+CakeStoreCost: CakeStoreCost,
+FactoryCost: FactoryCost,
+FarmCost: FarmCost,
+ConsoleCost: ConsoleCost,
+WebsiteCost: WebsiteCost,
+AdCost: AdCost,
+AppCost: AppCost,
+CakegameCost: CakegameCost,
+HackerCost: HackerCost
+}
+
+
+
+
+Cakes += Clickers * ClickerCPS;
+Cakes += Ovens * OvenCPS;
+Cakes += Banks * BankCPS;
+Cakes += CakeStores * CakeStoreCPS;
+Cakes += Factorys * FactoryCPS;
+Cakes += Farms * FarmCPS;
+Cakes += Consoles * ConsoleCPS;
+Cakes += Websites * WebsiteCPS;
+Cakes += Ads * AdCPS;
+Cakes += Apps * AppCPS;
+Cakes += Cakegames * CakegameCPS;
+Cakes += Hackers * HackerCPS;
+
+
+
+
+
+
+
+
+  CakesPerSec = Clickers * ClickerCPS + Ovens * OvenCPS + Banks * BankCPS + CakeStores * CakeStoreCPS + Factorys * FactoryCPS + Farms * FarmCPS + Consoles * ConsoleCPS + Websites * WebsiteCPS + Ads * AdCPS + Apps * AppCPS + Cakegames * CakegameCPS + Hackers * HackerCPS;
+    Upgrades = Clickers + Ovens + Banks + CakeStores + Factorys + Farms + Consoles + Websites + Ads + Apps + Cakegames + Hackers;
+    document.getElementById("ClickerCost").innerHTML = ClickerCost + "$";
+    document.getElementById("NumberUp").innerHTML = Upgrades;
+    document.getElementById("CakePerSec").innerHTML = CakesPerSec + " Cakes Per Second";
+    document.getElementById("CakeAmount").innerHTML = Cakes + " Cakes";
+    document.getElementById("ClickerNum").innerHTML = Clickers;
+    document.getElementById("OvenCost").innerHTML = OvenCost + "$";
+    document.getElementById("OvenNum").innerHTML = Ovens; 
+    document.getElementById("BankCost").innerHTML = BankCost + "$";
+    document.getElementById("BankNum").innerHTML = Banks;
+    document.getElementById("CakeStoreCost").innerHTML = CakeStoreCost + "$";
+    document.getElementById("CakeStoreNum").innerHTML = CakeStores;
+    document.getElementById("FactoryCost").innerHTML = FactoryCost + "$";
+    document.getElementById("FactoryNum").innerHTML = Factorys;
+    document.getElementById("FarmCost").innerHTML = FarmCost + "$";
+    document.getElementById("FarmNum").innerHTML = Farms;
+    document.getElementById("ConsoleCost").innerHTML = ConsoleCost + "$";
+    document.getElementById("ConsoleNum").innerHTML = Consoles;
+    document.getElementById("WebsiteCost").innerHTML = WebsiteCost + "$";
+    document.getElementById("WebsiteNum").innerHTML = Websites;
+    document.getElementById("AdCost").innerHTML = AdCost + "$";
+    document.getElementById("AdNum").innerHTML = Ads;
+    document.getElementById("AppCost").innerHTML = AppCost + "$";
+    document.getElementById("AppNum").innerHTML = Apps;
+    document.getElementById("CakegameCost").innerHTML =  CakegameCost + "$";
+    document.getElementById("CakegameNum").innerHTML = Cakegames;
+    document.getElementById("HackerCost").innerHTML = HackerCost + "$";
+    document.getElementById("HackerNum").innerHTML = Hackers;
+    if(Cakes => 1) {
+    document.title = Cakes + " Cakes - Cake Clicker";
+    }
+
+
+
+var Savegame = setInterval(function() {
+ SaveGame();
+}, 30000);
+
+
+
+var CookiegenTimer = setInterval(function() {
+Cakegen();   
+}, 1000);
+var Cakeclickertimer = setInterval(function() {
+UpdateCakes();
+}, 1);
+
+
+
+
+
+
+var Cakes = 0;
+var CakesPerSec = 0;
+var ClickerCPS = 1;
+var OvenCPS = 2;
+var BankCPS = 5;
+var CakeStoreCPS = 10;
+var FactoryCPS = 15;
+var FarmCPS = 20;
+var ConsoleCPS = 40;
+var WebsiteCPS = 50;
+var AdCPS = 70;
+var AppCPS = 100;
+var CakegameCPS = 130;
+var HackerCPS = 150;
+var Clickers = 0;
+var ClickerCost = 50;
+var Ovens = 0;
+var OvenCost = 100;
+var Banks = 0;
+var BankCost = 500;
+var CakeStores = 0;
+var CakeStoreCost = 1000;
+var Factorys = 0;
+var FactoryCost = 1750;
+var Farms = 0;
+var FarmCost = 2000;
+var Consoles = 0;
+var ConsoleCost = 4000;
+var Websites = 0;
+var WebsiteCost = 5750;
+var Ads = 0;
+var AdCost = 10000;
+var Apps = 0;
+var AppCost = 20000;
+var Cakegames = 0;
+var CakegameCost = 50000;
+var Hackers = 0;
+var HackerCost = 100000;
+var Upgrades = 0;
+
+
+
+
+var ClickerCPS = 1;
+var OvenCPS = 2;
+var BankCPS = 5;
+var CakeStoreCPS = 10;
+var FactoryCPS = 15;
+var FarmCPS = 20;
+var ConsoleCPS = 40;
+var WebsiteCPS = 50;
+var AdCPS = 70;
+var AppCPS = 100;
+var CakegameCPS = 130;
+var HackerCPS = 150;
+
+
+ swal({
+
+          title: "Upgrade",
+          text: "Not Enough Cakes!",
+          icon: "info",
+          button: "Ok",
+        });
+
+
+        swal({
+
+          title: "Upgrade",
+          text: "Not Enough Cakes!",
+          icon: "info",
+          button: "Ok",
+        });

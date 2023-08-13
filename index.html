@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_Cake Clicker_</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="images" rel="shortcut icon" href="images/Cake-Icon.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+      </div>
+ <div class="game-content" id="game-content">
+    <div class="Text">
+   <h1>Cake Clicker</h1>
+   <h2 id="CakeAmount"></h2>
+   <h3 id="CakePerSec"></h3>
+    <h2 class="Upgrades">Upgrades: <span id="NumberUp"></span></h2>
+    </div>
+    <div class="Cake">
+  <img src="" class="Cake" id="Cake" style="cursor: pointer;" onclick="CookieClicked(Cpc)" draggable="false">
+    </div>
+   <br/>
+  <button class="btn-item" onclick="buyClicker('Clickers', 'ClickerCost')">
+Buy Clicker for <span id="ClickerCost"></span> <span class="UpgradeText" id="ClickerNum">0</span>
+</button>
+<button class="btn-item" onclick="buyClicker('Ovens', 'OvenCost')">
+Buy Oven for <span id="OvenCost"></span> <span class="UpgradeText" id="OvenNum">0</span>
+</button>
+</button>
+<button class="btn-item" onclick="buyClicker('Banks', 'BankCost')">
+    Buy Bank for <span id="BankCost"></span> <span class="UpgradeText" id="BankNum">0</span>
+</button>
+    </button>
+    <button class="btn-item" onclick="buyClicker('CakeStores', 'CakeStoreCost')">
+        Buy Cake Store for <span id="CakeStoreCost"></span> <span class="UpgradeText" id="CakeStoreNum">0</span>
+    </button>
+        </button>
+        <button class="btn-item" onclick="buyClicker('Factorys', 'FactoryCost')">
+            Buy Factory for <span id="FactoryCost"></span> <span class="UpgradeText" id="FactoryNum">0</span>
+        </button>
+            </button>
+            <button class="btn-item" onclick="buyClicker('Farms', 'FarmCost')">
+                Buy Farm for <span id="FarmCost"></span> <span class="UpgradeText" id="FarmNum">0</span>
+            </button>
+            </button>
+                <button class="btn-item" onclick="buyClicker('Consoles', 'ConsoleCost')">
+                    Buy Console for <span id="ConsoleCost"></span> <span class="UpgradeText" id="ConsoleNum">0</span>
+                </button>
+                    </button>
+                    <button class="btn-item" onclick="buyClicker('Websites', 'WebsiteCost')">
+                        Buy Website for <span id="WebsiteCost"> </span> <span class="UpgradeText" id="WebsiteNum">0</span>
+                    </button>
+                        </button>
+                    <button class="btn-item" onclick="buyClicker('Ads', 'AdCost')">
+                        Buy Ad for <span id="AdCost"> </span> <span class="UpgradeText" id="AdNum">0</span>
+                    </button>
+                        </button>
+                        <button class="btn-item" onclick="buyClicker('Apps', 'AppCost')">
+                            Buy App for <span id="AppCost"> </span> <span class="UpgradeText" id="AppNum">0</span>
+                        </button>
+                            </button>
+                            <button class="btn-item" onclick="buyClicker('Cakegames', 'CakegameCost')">
+                                Buy Cake Clicker Game for <span id="CakegameCost"></span> <span class="UpgradeText" id="CakegameNum">0</span>
+                            </button>
+                            <button class="btn-item" onclick="buyClicker('Hackers', 'HackerCost')">
+                                Buy Hacker for <span id="HackerCost"></span> <span class="UpgradeText" id="HackerNum">0</span>
+                            </button>
+                            <button class="btn-item" onclick="ascend();">
+                              Ascend for <span id="AscendCost"></span> <span id="AscendNum" class="UpgradeText">0</span>
+                            </button>
+ </div>
+</body>
+<Script src="js/main.js"></Script>
+</html>
